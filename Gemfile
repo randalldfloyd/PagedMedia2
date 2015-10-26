@@ -36,6 +36,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'database_cleaner', git: 'https://github.com/atomical/database_cleaner', branch: 'adding_support_for_active_fedora_orm'
+  gem "rspec-rails"
+  gem 'simplecov'
+  gem "spring-commands-rspec"
+  gem "guard-rspec"
+  gem "capybara"
+  gem "launchy"
+  gem "factory_girl_rails"
+  gem "jettywrapper"
 end
 
 group :development do
