@@ -79,6 +79,7 @@ GEM
       json
     bcp47 (0.3.3)
       i18n
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     blacklight (5.15.0)
@@ -136,6 +137,13 @@ GEM
     debug_inspector (0.0.2)
     deprecation (0.2.2)
       activesupport
+    devise (3.5.2)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
     domain_name (0.5.25)
@@ -290,6 +298,7 @@ GEM
       activesupport
       nokogiri (>= 1.4.2)
       solrizer (~> 3.3)
+    orm_adapter (0.5.0)
     parslet (1.7.1)
       blankslate (>= 2.0, <= 4.0)
     qa (0.5.0)
@@ -387,6 +396,8 @@ GEM
       redis (~> 3.0, >= 3.0.4)
     redlock (0.1.3)
       redis (~> 3, >= 3.0.5)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     resque (1.25.2)
       mono_logger (~> 1.0)
       multi_json (~> 1.0)
@@ -487,6 +498,8 @@ GEM
     unf_ext (0.0.7.1)
     vegas (0.1.11)
       rack (>= 1.0.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -505,6 +518,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   curation_concerns
   database_cleaner!
+  devise
   factory_girl_rails
   guard-rspec
   jbuilder (~> 2.0)
