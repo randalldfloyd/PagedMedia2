@@ -1,11 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'curation_concerns'
-
-gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -35,18 +32,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'curation_concerns'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  gem 'database_cleaner', git: 'https://github.com/atomical/database_cleaner', branch: 'adding_support_for_active_fedora_orm'
-  gem "rspec-rails"
-  gem 'simplecov'
-  gem "spring-commands-rspec"
-  gem "guard-rspec"
-  gem "capybara"
-  gem "launchy"
-  gem "factory_girl_rails"
-  gem "jettywrapper"
+  # gem 'byebug'
 end
 
 group :development do
@@ -57,3 +47,11 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'rsolr', '~> 1.0.6'
+gem 'devise'
+gem 'devise-guests', '~> 0.3'
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'jettywrapper'
+end
