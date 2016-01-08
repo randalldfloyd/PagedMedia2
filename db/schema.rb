@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214215627) do
+ActiveRecord::Schema.define(version: 20151022130139) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id",       null: false
     t.string   "user_type"
     t.string   "document_id"
     t.string   "title"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "document_type"
   end
 
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 20151214215627) do
     t.text     "query_params"
     t.integer  "user_id"
     t.string   "user_type"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "searches", ["user_id"], name: "index_searches_on_user_id"

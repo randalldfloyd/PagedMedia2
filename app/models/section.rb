@@ -1,5 +1,3 @@
-# Generated via
-#  `rails generate curation_concerns:work MusicalScore`
 class Section < ActiveFedora::Base
   include ::CurationConcerns::WorkBehavior
   # include ::CurationConcerns::BasicMetadata
