@@ -22,7 +22,7 @@ class CurationConcerns::PagedsController < ApplicationController
       members = {:id => params[:id], :error => 'No memberss'}
     end
     #FIXME: keep?
-    memberss ||= "[]"
+    members ||= "[]"
     return members
   end
   
