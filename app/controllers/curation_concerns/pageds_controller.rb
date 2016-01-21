@@ -19,7 +19,7 @@ class CurationConcerns::PagedsController < ApplicationController
     unless search['response']['numFound'].to_i == 0
       members = search['response']['docs'][0]['member_ids_ssim']
     else
-      members = {:id => params[:id], :error => 'No memberss'}
+      members = {:id => params[:id], :error => 'No members'}
     end
     #FIXME: keep?
     members ||= "[]"
