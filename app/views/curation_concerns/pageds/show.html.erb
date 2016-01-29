@@ -12,9 +12,10 @@
 <h2>List Pages</h2>
 <ul>
 <% @members.each do |member| %>
-  <% page = Page.find(member) %>
-  <li><a href="<%= url_for_document(page) %>"><%= member %></a></li>
-  <li><%= link_to "Link", main_app.curation_concerns_page_path(member) %></li>
+  <li>
+    <%= link_to member['title_tesim'][0], main_app.curation_concerns_page_path(member['id']) %>
+    <%# link_to member.title[0], main_app.curation_concerns_page_path(member) %>
+  </li>
 <% end %>
 </ul>
 <%= render 'related_files', presenter: @presenter %>

@@ -8,6 +8,7 @@ class CurationConcerns::PagedsController < ApplicationController
   def show
     super
     @members = find_members()
+    #@members = Paged.find(params[:id]).members
   end
   
   def find_members(*args) 
@@ -15,9 +16,13 @@ class CurationConcerns::PagedsController < ApplicationController
       params[:id] = args[0]
     end
     members = {}
-    search = ActiveFedora::SolrService.instance.conn.select :params => { :q => params[:id], :fl => "member_ids_ssim" }
+    query = "{!join from=member_ids_ssim to=id}id:" + params[:id]
+    search = ActiveFedora::SolrService.instance.conn.select :params => { :q => query, :fl => "id,title_tesim" }
+    #puts "*******SEARH*******"
+    #puts search
+    #puts "*******************"
     unless search['response']['numFound'].to_i == 0
-      members = search['response']['docs'][0]['member_ids_ssim']
+      members = search['response']['docs']
     else
       members = {:id => params[:id], :error => 'No members'}
     end
