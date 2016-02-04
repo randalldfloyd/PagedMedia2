@@ -3,6 +3,7 @@ CurationConcerns.configure do |config|
   config.register_curation_concern :musical_score
   config.register_curation_concern :paged
   config.register_curation_concern :page
+  config.register_curation_concern :section
   config.fits_to_desc_mapping = {
     file_title: :title,
     file_author: :creator
