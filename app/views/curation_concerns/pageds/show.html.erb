@@ -9,16 +9,18 @@
 <%= render 'representative_media', work: @presenter %>
 <%= render 'attributes', curation_concern: @presenter %>
 
-<h2>List Pages</h2>
-
-<ul>
-<% @members.each do |member| %>
-  <% model_name = member['has_model_ssim'][0].downcase %>
-  <li>
-    <%= link_to member['title_tesim'].first.to_s, eval("main_app.curation_concerns_#{model_name}_path('" + member['id'] + "')") %>
-  </li>
-<% end %>
-</ul>
+<div id="pages_list">
+  <h2>List Pages</h2>
+  <ul>
+  <% @members.each do |member| %>
+    <% model_name = member['has_model_ssim'][0].downcase %>
+    <li>
+      <%= link_to member['title_tesim'].first.to_s, eval("main_app.curation_concerns_#{model_name}_path('" + member['id'] + "')") %>
+    </li>
+  <% end %>
+  </ul>
+  <%= link_to "Add Page", main_app.new_curation_concerns_page_path %>
+</div>
 
 <%# render 'related_files', presenter: @presenter %>
 <% if editor %>
