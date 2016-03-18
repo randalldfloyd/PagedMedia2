@@ -4,6 +4,11 @@
   <div class="row">
     <div class="col-md-6">
       <fieldset class="required">
+        <legend>Page to be added to:</legend>
+        <span>
+          <%= label_tag 'file_paged','Paged ID', class: "string optional" %>
+        </span>
+        <%= text_field_tag 'file_paged', @paged_id, class: 'form-control' %>
         <legend>Your File&#8217;s Title</legend>
         <span class="control-label">
           <%= label_tag 'file_set[title][]', 'Title',  class: "string optional" %>

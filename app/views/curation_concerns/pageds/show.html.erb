@@ -19,7 +19,7 @@
     </li>
   <% end %>
   </ul>
-  <%= link_to "Add Page", main_app.new_curation_concerns_page_path %>
+  <%= link_to "Add Page", main_app.new_curation_concerns_page_path(:pg_id => @pg_id) %>
 </div>
 
 <%# render 'related_files', presenter: @presenter %>
