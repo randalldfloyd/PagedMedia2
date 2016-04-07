@@ -1,0 +1,20 @@
+Description:
+  This generator creates the necessary files for a work that extends
+  PagedMedia's Work models and behaviors.
+
+Example:
+  rails generate paged_media:work PagedType
+
+  This will create:
+    app/models/paged_type.rb
+    app/actors/curation_concerns/paged_type_actor.rb
+    app/controllers/curation_concerns/paged_types_controller.rb
+    app/views/curation_concerns/paged_types/.keep
+    spec/factories/paged_type_factory.rb
+    spec/models/paged_type_spec.rb
+    spec/actors/curation_concerns/paged_type_actor_spec.rb
+    spec/controllers/curation_concerns/paged_types_controller_spec.rb
+
+  This will also:
+    register PagedType as a valid curation concern in:
+      config/initializers/curation_concerns.rb

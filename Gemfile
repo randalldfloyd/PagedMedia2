@@ -37,6 +37,7 @@ gem 'curation_concerns'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'byebug'
+
 end
 
 group :development do
@@ -54,6 +55,8 @@ gem 'devise-guests', '~> 0.3'
 group :development, :test do
   gem 'rspec-rails'
   gem 'jettywrapper'
+  # Rubygems version of ammeter has circular dependency problem so get gem from Github with fix
+  gem "ammeter", git: "https://github.com/alexrothenberg/ammeter.git"
 end
 
 group :development, :test do
