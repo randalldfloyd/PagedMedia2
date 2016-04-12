@@ -3,7 +3,7 @@
 
 class CurationConcerns::PagedsController < ApplicationController
   include CurationConcerns::CurationConcernController
-  set_curation_concern_type Paged
+  self.curation_concern_type = Paged
 
   def show
     super
