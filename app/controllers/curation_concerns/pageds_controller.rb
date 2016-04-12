@@ -8,7 +8,6 @@ class CurationConcerns::PagedsController < ApplicationController
   def show
     super
     @members = find_members()
-    @pg_id = params[:id]
     #@members = Paged.find(params[:id]).members
   end
 
