@@ -1,5 +1,5 @@
 class Section < ActiveFedora::Base
-  include ::CurationConcerns::WorkBehavior
-  # include ::CurationConcerns::BasicMetadata
+  include Hydra::Works::WorkBehavior
+
   validates :title, presence: { message: 'Your work must have a title.' }
 end
