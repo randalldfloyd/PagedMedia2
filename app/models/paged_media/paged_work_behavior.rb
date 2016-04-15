@@ -1,4 +1,4 @@
-module PMP::PagedWorkBehavior
+module PagedMedia::PagedWorkBehavior
   extend ActiveSupport::Concern
   include Hydra::Works::WorkBehavior
 
