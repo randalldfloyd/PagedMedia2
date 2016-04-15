@@ -1,6 +1,6 @@
 CurationConcerns.configure do |config|
   # Injected via `rails g curation_concerns:work MusicalScore`
-  config.register_curation_concern :paged
+  config.register_curation_concern :paged_work
   config.register_curation_concern :musical_score
 
   # Should schema.org microdata be displayed?

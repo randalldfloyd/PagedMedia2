@@ -1,6 +1,7 @@
-class PagedMedia < ActiveFedora::Base
+class PagedWork < ActiveFedora::Base
   include ::CurationConcerns::WorkBehavior
-  include ::PMP::PagedMediaBehavior
+  include ::CurationConcerns::BasicMetadata
+  include ::PMP::PagedWorkBehavior
 
   validates :title, presence: { message: 'Your work must have a title.' }
   validates :creator, presence: { message: 'Your work must have an author.' }
