@@ -8,9 +8,10 @@ desc 'Run specs on travis'
 task :ci do
   ENV['RAILS_ENV'] = 'test'
   ENV['TRAVIS'] = '1'
-  jetty_params = Jettywrapper.load_config
-  error = Jettywrapper.wrap(jetty_params) do
+  # TODO We need the solr_wrapper and fcrepo_wrapper startup to go here instead of jetty
+  #jetty_params = Jettywrapper.load_config
+  #error = Jettywrapper.wrap(jetty_params) do
     Rake::Task['spec'].invoke
-  end
-  raise "test failures: #{error}" if error
+  #end
+  #raise "test failures: #{error}" if error
 end
