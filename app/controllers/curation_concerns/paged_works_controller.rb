@@ -1,14 +1,14 @@
 # Generated via
-#  `rails generate curation_concerns:work Paged`
+#  `rails generate curation_concerns:work PagedMedia`
 
-class CurationConcerns::PagedsController < ApplicationController
+class CurationConcerns::PagedWorksController < ApplicationController
   include CurationConcerns::CurationConcernController
-  self.curation_concern_type = Paged
+  self.curation_concern_type = PagedWork
 
   def show
     super
-    @members = find_members()
-    #@members = Paged.find(params[:id]).members
+    # @members = find_members()
+    @members = PagedWork.find(params[:id]).members
   end
 
   def find_members(*args)
