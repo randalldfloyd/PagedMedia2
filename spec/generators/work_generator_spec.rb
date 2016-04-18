@@ -1,9 +1,9 @@
 require 'spec_helper'
 require 'rails_helper'
 
-require 'generators/pmp_curation_concerns/work/work_generator'
+require 'generators/paged_media/work/work_generator'
 
-describe PmpCurationConcerns::WorkGenerator, :type => :generator do
+describe PagedMedia::WorkGenerator, :type => :generator do
   destination File.expand_path("../../../tmp/test", __FILE__)
   before do
     prepare_destination

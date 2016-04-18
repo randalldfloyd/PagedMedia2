@@ -14,7 +14,7 @@ class Rails::Generators::NamedBase
     end
 end
 
-class PmpCurationConcerns::WorkGenerator < Rails::Generators::NamedBase
+class PagedMedia::WorkGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../templates', __FILE__)
 
   argument :attributes, type: :array, default: [], banner: 'field:type field:type'
