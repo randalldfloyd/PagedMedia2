@@ -1,0 +1,7 @@
+# Generated via
+#  `rails generate paged_media:work <%= class_name %>`
+
+class CurationConcerns::<%= class_name.pluralize %>Controller < ApplicationController
+  include CurationConcerns::CurationConcernController
+  self.curation_concern_type = <%= class_name %>
+end
