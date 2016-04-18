@@ -2,6 +2,7 @@
 #  `rails generate paged_media:work <%= class_name %>`
 class <%= class_name %> < ActiveFedora::Base
   include ::CurationConcerns::WorkBehavior
+  include ::CurationConcerns::BasicMetadata
   include ::PagedMedia::PagedWorkBehavior
 
   validates :title, presence: { message: 'Your work must have a title.' }
