@@ -1,4 +1,4 @@
-class Section < ActiveFedora::Base
+class Container < ActiveFedora::Base
   include Hydra::Works::WorkBehavior
 
   property :title, predicate: ::RDF::DC.title, multiple: false
