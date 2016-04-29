@@ -59,6 +59,9 @@ group :development, :test do
   gem "factory_girl_rails"
   # Rubygems version of ammeter has circular dependency problem so get gem from Github with fix
   gem "ammeter", git: "https://github.com/alexrothenberg/ammeter.git"
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'coveralls', require: false
 end
 
 
