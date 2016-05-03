@@ -6,3 +6,6 @@ AllCops:
   Exclude:
     - 'script/**/*'
     - 'vendor/**/*'
+
+Style/ClassAndModuleChildren:
+  Enabled: false
