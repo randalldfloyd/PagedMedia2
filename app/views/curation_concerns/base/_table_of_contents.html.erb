@@ -1,53 +1,10 @@
   <div class="row">
     <div >
-      <!-- TODO: Get real response from controller actions -->
-      <%
-         json = '[
-         {
-             "id": "8823ca44-b3b2-4ea7-bbbc-3b6edd62cf27",
-             "title": "Half title page",
-             "type": "Container"
-         },
-         {
-             "id": "34b6ab73-a2bd-4f31-9bec-efa0258d4668",
-             "title": "The Score",
-             "type": "Container"
-         },
-         [
-             {
-                 "id": "8db5408c-a4d3-4999-97ce-6d86ee8ae1b1",
-                 "title": "I: Allegro con brio",
-                 "type": "Container"
-             },
-             {
-                 "id": "3ee21ec3-c0c1-4d8a-93fe-a34086067c92",
-                 "title": "II. Allegro",
-                 "type": "Container"
-             },
-             [
-             {
-                 "id": "8db5408c-a4d3-4999-97ce-6d86ee8ae1b1",
-                 "title": "III. More Allegro",
-                 "type": "Container"
-             },
-             {
-                 "id": "3ee21ec3-c0c1-4d8a-93fe-a34086067c92",
-                 "title": "IV. Even More Allegro",
-                 "type": "Container"
-             }
-         ]
-         ]
-   ]'
-
-
-      %>
-
-      <p></p>
-      <%= content_tag(:h3, 'Table of Contents') %>
-      <% hash = JSON.parse(json) %>
-      <%= format_array(hash) %>
-
-
+      <% unless @cont_json.nil? %>
+        <%= content_tag(:h3, 'Table of Contents') %>
+        <% cont_array = JSON.parse(@cont_json) %>
+        <%= format_array(cont_array) %>
+      <% end %>
     </div>
   </div>
 
