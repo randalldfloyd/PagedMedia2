@@ -6,7 +6,7 @@ FactoryGirl.define do
 
     factory :contained_page do
       after(:build) do |work|
-        work.ordered_members << FactoryGirl.create(:page)
+        work.ordered_members << FactoryGirl.build(:page)
       end
     end
   end
