@@ -47,6 +47,11 @@ module PagedMedia::ObjectBehavior
     relationship_list(:members, :id, classes)
   end
 
+  # list descendents as titles
+  def descendents_list_titles(*classes)
+    relationship_list(:members, :title, classes)
+  end
+
   # list ancestors as objects
   def ancestors_list(*classes)
     relationship_list(:member_of, :itself, classes)
@@ -55,6 +60,11 @@ module PagedMedia::ObjectBehavior
   # list ancestors as ids
   def ancestors_list_ids(*classes)
     relationship_list(:member_of, :id, classes)
+  end
+
+  # list ancestors as ids
+  def ancestors_list_titles(*classes)
+    relationship_list(:member_of, :title, classes)
   end
 
   # abstract method to build an array
