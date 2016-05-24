@@ -19,6 +19,7 @@ FactoryGirl.define do
         work.ordered_members << FactoryGirl.build(:contained_page)
         work.ordered_members << FactoryGirl.build(:contained_page)
         work.ordered_members << FactoryGirl.build(:page)
+        work.ordered_members.to_a[1].ordered_members << work.ordered_members.to_a[0].ordered_members.to_a[0]
       end
 
     end

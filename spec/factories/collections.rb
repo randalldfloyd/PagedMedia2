@@ -13,7 +13,7 @@ FactoryGirl.define do
     visibility Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC
 
     factory :complete_collection do
-      after(:build) do |work|
+      after(:create) do |work|
         work.ordered_members << FactoryGirl.build(:complete_paged_work)
       end
     end
