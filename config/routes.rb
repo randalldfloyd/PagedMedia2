@@ -9,7 +9,6 @@ resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 
 end
 
   devise_for :users
-  mount Hydra::Collections::Engine => '/'
   mount CurationConcerns::Engine, at: '/'
   resources :welcome, only: 'index'
   root 'welcome#index'
@@ -30,6 +29,7 @@ resources :bookmarks do
   end
 end
 
+resources :containers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
