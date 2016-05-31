@@ -3,29 +3,17 @@ module PagedMedia::ContainerBehavior
   extend ActiveSupport::Concern
   include Hydra::Works::WorkBehavior
 
+  # List all container titles
+  #
+  # @return [Array] titles of all pages in container
   def list_titles
-    members = self.members
-    member_titles = []
-    members.each do |mem|
-      if mem.is_a?(Container)
-        member_titles.push [mem.title => mem.list_titles]
-      else
-        member_titles.push mem.title
-      end
-    end
-    member_titles
+    descendents_list_titles
   end
 
+  # Returns nested hash of objects in container
+  #
+  # @return [Hash] nested hash of page objects in container
   def members_nested
-    members = self.members
-    member_ids = []
-    members.each do |mem|
-      if mem.is_a?(Container)
-        member_ids.push [mem => mem.members_nested]
-      else
-        member_ids.push mem
-      end
-    end
-    member_ids
+    descendents_tree
   end
 end
