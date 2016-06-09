@@ -18,5 +18,12 @@ FactoryGirl.define do
       end
     end
 
+    trait :with_chapters do
+      after(:create) do |collection|
+        collection.ordered_members << FactoryGirl.build(:contained_page)
+        collection.ordered_members << FactoryGirl.build(:contained_page)
+      end
+    end
+
   end
 end
